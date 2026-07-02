@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (navbar) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 20) {
-        navbar.style.boxShadow = '0 4px 24px rgba(30,111,214,0.12)';
+        navbar.style.boxShadow = '0 4px 24px rgba(229,57,53,0.12)';
       } else {
         navbar.style.boxShadow = 'none';
       }

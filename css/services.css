@@ -220,3 +220,58 @@
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
+
+@media (max-width: 768px) {
+  .services-page-hero {
+    min-height: 0;
+    padding: 104px 0 54px;
+  }
+
+  .services-portfolio {
+    padding: 54px 0;
+  }
+  .services-portfolio-header {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+  }
+
+  .services-portfolio-header > p {
+    max-width: none;
+    padding-left: 16px;
+  }
+
+  .services-portfolio .svc-list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .services-portfolio .svc-item,
+  .services-portfolio .svc-item:first-child {
+    min-height: 0;
+    padding: 28px 0;
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  .services-portfolio .svc-item,
+  .services-portfolio .svc-item:first-child {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .services-portfolio .svc-item::after {
+    top: 28px;
+  }
+
+  .services-portfolio .svc-body h3 {
+    max-width: calc(100% - 36px);
+  }
+
+  .services-portfolio .svc-features {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+}

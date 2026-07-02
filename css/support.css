@@ -154,3 +154,31 @@
 .support-hero-photo img {
   object-position: 48% center;
 }
+
+@media (max-width: 560px) {
+  .support-hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .support-channels,
+  .sla-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .support-channel,
+  .sla-card {
+    padding: 20px;
+  }
+
+  .support-channel-badge {
+    position: static;
+    width: fit-content;
+    margin-bottom: 4px;
+  }
+
+  .sla-time {
+    font-size: 1.65rem;
+  }
+}

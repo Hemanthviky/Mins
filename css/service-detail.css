@@ -17,6 +17,30 @@
 /* -- GRIDS -- */
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
 
+.service-side-card {
+  padding: 36px;
+}
+
+.service-benefit-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.service-benefit-row:last-child {
+  margin-bottom: 0;
+}
+
+.wireless-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
 /* -- VISUAL BOX -- */
 .visual-box {
   background: linear-gradient(135deg, var(--soft-blue), #F5E6A3);
@@ -493,6 +517,12 @@
 }
 
 @media (max-width: 768px) {
+  .service-detail-hero {
+    min-height: 0;
+    padding-top: 100px;
+    padding-bottom: 56px;
+  }
+
   .service-detail-hero .service-hero-photo {
     min-height: 300px;
     padding: 0;
@@ -510,5 +540,33 @@
     left: 18px;
     bottom: 23px;
     font-size: 0.52rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .service-side-card {
+    padding: 20px;
+  }
+
+  .service-benefit-row {
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .wireless-stats-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .service-detail-hero {
+    padding-top: 90px;
+    padding-bottom: 40px;
+  }
+
+  .service-detail-hero .service-hero-photo {
+    min-height: 220px;
+  }
+
+  .service-detail-hero .service-hero-photo::before {
+    font-size: 0.88rem;
   }
 }

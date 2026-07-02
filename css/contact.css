@@ -73,7 +73,7 @@
 }
 
 .btn-full {
-  width: 100%;
+
   text-align: center;
   padding: 14px;
   font-size: 1rem;
@@ -262,4 +262,49 @@
 
 .contact-hero-photo img {
   object-position: center;
+}
+
+@media (max-width: 768px) {
+  .contact-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .contact-form-wrap,
+  .contact-info-card {
+    padding: 24px;
+  }
+
+  .contact-quick-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .contact-form-wrap,
+  .contact-info-card {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .contact-item,
+  .contact-quick-card {
+    gap: 12px;
+  }
+
+  .contact-quick-card {
+    padding: 18px;
+  }
+
+  .contact-badge-row {
+    flex-direction: column;
+  }
+
+  .contact-badge {
+    justify-content: center;
+  }
 }

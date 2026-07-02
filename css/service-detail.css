@@ -393,9 +393,6 @@
   padding: 0;
   display: block;
   isolation: isolate;
-  background-image:
-    linear-gradient(180deg, rgba(5,24,45,0.04) 20%, rgba(5,24,45,0.8) 100%),
-    url('../assets/hero-it-infrastructure.png');
   background-size: cover;
   background-position: center;
   border: 8px solid rgba(255,255,255,0.9);
@@ -433,6 +430,9 @@
 }
 
 .service-detail-hero .service-hero-photo-internet {
+  background-image:
+    linear-gradient(180deg, rgba(5,24,45,0.04) 20%, rgba(5,24,45,0.8) 100%),
+    url('../assets/Reliable High-Speed Business Connectivity.png');
   background-position: 68% center;
 }
 
@@ -445,6 +445,9 @@
 }
 
 .service-detail-hero .service-hero-photo-network {
+  background-image:
+    linear-gradient(180deg, rgba(5,24,45,0.04) 20%, rgba(5,24,45,0.8) 100%),
+    url('../assets/Building High-Performance Network Infrastructure Building High-Performance Network Infrastructure.png');
   background-position: 45% center;
 }
 
@@ -457,6 +460,9 @@
 }
 
 .service-detail-hero .service-hero-photo-wireless {
+  background-image:
+    linear-gradient(180deg, rgba(5,24,45,0.04) 20%, rgba(5,24,45,0.8) 100%),
+    url('../assets/Secure Wireless Connectivity Without Limits.png');
   background-position: 60% center;
 }
 
@@ -469,6 +475,9 @@
 }
 
 .service-detail-hero .service-hero-photo-security {
+  background-image:
+    linear-gradient(180deg, rgba(5,24,45,0.04) 20%, rgba(5,24,45,0.8) 100%),
+    url('../assets/Protecting Your Business From Modern Cyber Threats.png');
   background-position: 78% center;
 }
 
@@ -481,6 +490,9 @@
 }
 
 .service-detail-hero .service-hero-photo-datacenter {
+  background-image:
+    linear-gradient(180deg, rgba(5,24,45,0.04) 20%, rgba(5,24,45,0.8) 100%),
+    url('../assets/Powering Mission-Critical Operations.png');
   background-position: 28% center;
 }
 
@@ -493,6 +505,9 @@
 }
 
 .service-detail-hero .service-hero-photo-managed {
+  background-image:
+    linear-gradient(180deg, rgba(5,24,45,0.04) 20%, rgba(5,24,45,0.8) 100%),
+    url('../assets/Your Dedicated Technology Partner.png');
   background-position: 70% center;
 }
 
@@ -505,6 +520,9 @@
 }
 
 .service-detail-hero .service-hero-photo-storage {
+  background-image:
+    linear-gradient(180deg, rgba(5,24,45,0.04) 20%, rgba(5,24,45,0.8) 100%),
+    url('../assets/Enterprise-Class Computing & Data Management.png');
   background-position: 22% center;
 }
 

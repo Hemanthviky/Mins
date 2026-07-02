@@ -1,5 +1,6 @@
-﻿// ============================================
-//   MINS Technologies - Global JavaScript
+// ============================================
+//   MINS Technologies - Shared Site JavaScript
+//   (loaded on every page: nav, reveal, counters, tilt, scroll)
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -131,40 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // -- 7. Contact Form Validation --
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let valid = true;
-      const required = contactForm.querySelectorAll('[required]');
-
-      required.forEach(field => {
-        field.style.borderColor = '';
-        if (!field.value.trim()) {
-          field.style.borderColor = '#ef4444';
-          valid = false;
-        }
-      });
-
-      const email = contactForm.querySelector('[type="email"]');
-      if (email && email.value && !email.value.includes('@')) {
-        email.style.borderColor = '#ef4444';
-        valid = false;
-      }
-
-      if (valid) {
-        const successMsg = document.getElementById('formSuccess');
-        if (successMsg) {
-          successMsg.style.display = 'block';
-          contactForm.reset();
-          setTimeout(() => { successMsg.style.display = 'none'; }, 5000);
-        }
-      }
-    });
-  }
-
-  // -- 8. Smooth Scroll for anchor links --
+  // -- 6. Smooth Scroll for anchor links --
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const target = document.querySelector(anchor.getAttribute('href'));
@@ -175,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // -- 9. Navbar scroll style --
+  // -- 7. Navbar scroll style --
   const navbar = document.querySelector('.navbar');
   if (navbar) {
     window.addEventListener('scroll', () => {
@@ -188,4 +156,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
-

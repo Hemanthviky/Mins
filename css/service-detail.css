@@ -1,0 +1,514 @@
+/* -- CARDS -- */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+/* -- GRIDS -- */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+
+/* -- VISUAL BOX -- */
+.visual-box {
+  background: linear-gradient(135deg, var(--soft-blue), #F5E6A3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  position: relative;
+  overflow: hidden;
+}
+
+.visual-box svg {
+  width: 100%;
+  max-width: 340px;
+}
+
+/* -- PAGE HERO -- */
+.page-hero {
+  padding: 140px 0 70px;
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 60%, #FFF8F0 100%);
+  position: relative;
+}
+
+.page-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Professional service heroes */
+.service-detail-hero {
+  min-height: 670px;
+  padding: 150px 0 84px;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 82% 22%, rgba(212,175,55,0.2), transparent 25%),
+    radial-gradient(circle at 12% 88%, rgba(229,57,53,0.22), transparent 28%),
+    linear-gradient(135deg, #1A0A05 0%, #5C120F 54%, #8B1A1A 100%);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.service-detail-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  opacity: 0.34;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(90deg, #000, transparent 72%);
+}
+
+.service-detail-hero::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 560px;
+  height: 560px;
+  top: 50%;
+  right: -170px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 90px rgba(255,255,255,0.025),
+    0 0 0 180px rgba(255,255,255,0.018);
+  transform: translateY(-50%);
+}
+
+.service-detail-hero .page-hero-grid {
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 84px;
+}
+
+.service-detail-hero h1 {
+  max-width: 680px;
+  color: #fff;
+  font-size: clamp(2.55rem, 4.5vw, 4.2rem);
+  letter-spacing: -0.045em;
+}
+
+.service-detail-hero .page-hero-grid > div:first-child > p {
+  max-width: 660px;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.8;
+}
+
+.service-detail-hero .visual-box {
+  min-height: 400px;
+  padding: 42px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.15), rgba(255,255,255,0.06));
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 28px;
+  box-shadow:
+    0 28px 70px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.18);
+  backdrop-filter: blur(16px);
+}
+
+.service-detail-hero .visual-box::before {
+  content: 'MINS TECHNOLOGY OPERATIONS';
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  color: rgba(255,255,255,0.52);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.service-detail-hero .visual-box::after {
+  content: '\25CF  SYSTEM ONLINE';
+  position: absolute;
+  right: 22px;
+  bottom: 18px;
+  color: #8de5ad;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.service-detail-hero .visual-box > svg,
+.service-detail-hero .visual-box > .support-dashboard {
+  filter: drop-shadow(0 16px 24px rgba(0,0,0,0.16));
+}
+
+/* -- LIST WITH TICKS -- */
+.tick-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.tick-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.tick-list li::before {
+  content: '';
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--soft-blue);
+  border: 2px solid var(--primary);
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E53935' stroke-width='3'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* -- BENEFITS GRID -- */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.benefit-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+.benefit-icon {
+  width: 52px; height: 52px;
+  background: var(--soft-blue);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.benefit-card h4 { margin-bottom: 6px; }
+
+.benefit-card p { font-size: 0.82rem; }
+
+.why-contact-card .tick-list li { color: rgba(255,255,255,0.9); font-size: 0.9rem; }
+
+.why-contact-card .tick-list li::before { color: #F5E6A3; }
+
+/* -- SUPPORT DASHBOARD -- */
+.support-dashboard {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.status-dot { display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; font-weight: 600; }
+
+.status-dot::before {
+  content: '';
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: pulse-green 2s infinite;
+}
+
+.dashboard-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.metric-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 18px;
+}
+
+.metric-card .metric-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.metric-card .metric-label { font-size: 0.78rem; color: var(--muted); }
+
+.metric-card .metric-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 20px;
+  margin-top: 6px;
+  background: #dcfce7;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+/* -- BADGE ROW -- */
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.badge {
+  background: var(--soft-blue);
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+
+/* Service hero responsive refinements */
+@media (max-width: 1024px) {
+  .service-detail-hero {
+    min-height: 0;
+  }
+
+  .service-detail-hero .page-hero-grid {
+    gap: 44px;
+  }
+
+  .service-detail-hero .visual-box {
+    min-height: 340px;
+    padding: 34px;
+  }
+}
+
+/* Light professional theme for individual service-page heroes */
+.service-detail-hero {
+  background:
+    radial-gradient(circle at 84% 20%, rgba(229,57,53,0.14), transparent 26%),
+    radial-gradient(circle at 8% 92%, rgba(212,175,55,0.14), transparent 30%),
+    linear-gradient(135deg, #fffdf8 0%, #fff8f0 52%, #fff3dc 100%);
+  border-bottom-color: var(--border);
+}
+
+.service-detail-hero::before {
+  opacity: 0.58;
+  background-image:
+    linear-gradient(rgba(229,57,53,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(229,57,53,0.06) 1px, transparent 1px);
+}
+
+.service-detail-hero::after {
+  border-color: rgba(229,57,53,0.1);
+  box-shadow:
+    0 0 0 90px rgba(229,57,53,0.025),
+    0 0 0 180px rgba(229,57,53,0.018);
+}
+
+.service-detail-hero h1 {
+  color: var(--navy);
+}
+
+.service-detail-hero .page-hero-grid > div:first-child > p {
+  color: var(--muted);
+}
+
+.service-detail-hero .visual-box {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.92), rgba(255,243,220,0.75));
+  border-color: rgba(229,57,53,0.18);
+  box-shadow:
+    0 28px 70px rgba(229,57,53,0.14),
+    inset 0 1px 0 #fff;
+}
+
+.service-detail-hero .visual-box::before {
+  color: rgba(139,26,26,0.52);
+}
+
+.service-detail-hero .visual-box::after {
+  color: #16803b;
+}
+
+/* Photo-led service hero visuals */
+.service-detail-hero .service-hero-photo {
+  min-height: 420px;
+  padding: 0;
+  display: block;
+  isolation: isolate;
+  background-image:
+    linear-gradient(180deg, rgba(5,24,45,0.04) 20%, rgba(5,24,45,0.8) 100%),
+    url('../assets/hero-it-infrastructure.png');
+  background-size: cover;
+  background-position: center;
+  border: 8px solid rgba(255,255,255,0.9);
+  box-shadow: 0 28px 70px rgba(229,57,53,0.18);
+}
+
+.service-detail-hero .service-hero-photo::before {
+  content: 'Enterprise Technology Operations';
+  top: auto;
+  left: 28px;
+  right: 28px;
+  bottom: 62px;
+  z-index: 2;
+  color: #fff;
+  font-size: 1.12rem;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.service-detail-hero .service-hero-photo::after {
+  content: '24/7 MONITORING  /  CERTIFIED ENGINEERS';
+  left: 28px;
+  right: auto;
+  bottom: 31px;
+  z-index: 2;
+  color: rgba(255,255,255,0.72);
+  font-size: 0.62rem;
+  letter-spacing: 1.2px;
+}
+
+.service-detail-hero .service-hero-photo > svg,
+.service-detail-hero .service-hero-photo > .support-dashboard {
+  display: none;
+}
+
+.service-detail-hero .service-hero-photo-internet {
+  background-position: 68% center;
+}
+
+.service-detail-hero .service-hero-photo-internet::before {
+  content: 'High-Availability Connectivity';
+}
+
+.service-detail-hero .service-hero-photo-internet::after {
+  content: 'UP TO 10 GBPS  /  99.9% SLA';
+}
+
+.service-detail-hero .service-hero-photo-network {
+  background-position: 45% center;
+}
+
+.service-detail-hero .service-hero-photo-network::before {
+  content: 'Enterprise Network Command Center';
+}
+
+.service-detail-hero .service-hero-photo-network::after {
+  content: 'SECURE LAN / WAN  /  PROACTIVE MONITORING';
+}
+
+.service-detail-hero .service-hero-photo-wireless {
+  background-position: 60% center;
+}
+
+.service-detail-hero .service-hero-photo-wireless::before {
+  content: 'Intelligent Wireless Infrastructure';
+}
+
+.service-detail-hero .service-hero-photo-wireless::after {
+  content: 'WI-FI 6 / 6E  /  SEAMLESS COVERAGE';
+}
+
+.service-detail-hero .service-hero-photo-security {
+  background-position: 78% center;
+}
+
+.service-detail-hero .service-hero-photo-security::before {
+  content: 'Security Operations & Threat Response';
+}
+
+.service-detail-hero .service-hero-photo-security::after {
+  content: 'ZERO TRUST  /  CONTINUOUS PROTECTION';
+}
+
+.service-detail-hero .service-hero-photo-datacenter {
+  background-position: 28% center;
+}
+
+.service-detail-hero .service-hero-photo-datacenter::before {
+  content: 'Mission-Critical Datacenter Operations';
+}
+
+.service-detail-hero .service-hero-photo-datacenter::after {
+  content: 'RESILIENT DESIGN  /  BUSINESS CONTINUITY';
+}
+
+.service-detail-hero .service-hero-photo-managed {
+  background-position: 70% center;
+}
+
+.service-detail-hero .service-hero-photo-managed::before {
+  content: 'Managed Technology Operations';
+}
+
+.service-detail-hero .service-hero-photo-managed::after {
+  content: '24/7 SUPPORT  /  PREDICTABLE SERVICE';
+}
+
+.service-detail-hero .service-hero-photo-storage {
+  background-position: 22% center;
+}
+
+.service-detail-hero .service-hero-photo-storage::before {
+  content: 'Enterprise Compute & Data Platform';
+}
+
+.service-detail-hero .service-hero-photo-storage::after {
+  content: 'HIGH AVAILABILITY  /  SECURE DATA';
+}
+
+@media (max-width: 768px) {
+  .service-detail-hero .service-hero-photo {
+    min-height: 300px;
+    padding: 0;
+    border-width: 5px;
+  }
+
+  .service-detail-hero .service-hero-photo::before {
+    left: 18px;
+    right: 18px;
+    bottom: 48px;
+    font-size: 0.95rem;
+  }
+
+  .service-detail-hero .service-hero-photo::after {
+    left: 18px;
+    bottom: 23px;
+    font-size: 0.52rem;
+  }
+}

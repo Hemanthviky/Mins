@@ -1,4 +1,4 @@
-﻿tailwind.config = {
+tailwind.config = {
   theme: {
     extend: {
       colors: {
@@ -16,4 +16,3 @@
     }
   }
 };
-
